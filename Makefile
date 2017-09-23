@@ -1,0 +1,19 @@
+CC = g++
+CFLAGS = -Wall
+PROG = carrom_game
+
+SRCS = main.cpp
+
+ifeq ($(shell uname),Darwin)
+	LIBS = -framework OpenGL -framework GLUT
+else
+	LIBS = -lglut -lGL -lGLU -lm
+endif
+
+all: $(PROG)
+
+$(PROG):	$(SRCS)
+	$(CC) $(CFLAGS) -o $(PROG) $(SRCS) $(LIBS)
+
+clean:
+	rm -f $(PROG)
