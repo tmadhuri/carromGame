@@ -1,5 +1,7 @@
 Carrom Board
--------------
+============
+
+> Unmaintained.
 
 Rules:
  - This is a single player game.
